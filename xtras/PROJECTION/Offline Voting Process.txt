@@ -1,0 +1,35 @@
+Offline Voting Process:
+-----------------------------------
+1. Create Role (if needed) [Users]
+3. Bind Permission with role [Users]
+2. Create Users (if needed) [Users]
+---------
+1. Change Settings [Settings]
+---------
+2. Create Position [Ballot]
+3. Create Candidate [Ballot]
+4. Create Ballot [Ballot]
+---------
+5. Import Voters + Image [Voters]
+5.1 Disable Imported Voters from Action Setting [Settings]
+5.2 Disable Permanently Voters from Action Setting [Settings]
+5.3 Disable Import Voters data from Action Setting [Settings]
+6. Generate Unique Codes [Offline]
+7. Lock QR Codes (Disabled Add Voter) [Offline]
+8. Check Print Settings [Settings]
+9. Print Ballot Paper with Attached QR Codes [Offline]
+---------
+10. Create Counter Officer [Offline]
+11. Create Counter [Offline]
+12. Create User for Counter Officer [Users]
+---------
+12.1. Test Devices & Services at One Place [Test Devices & Services]
+---------
+13. Validate Ballot Paper by EC [Offline]
+14. Create Token & Print by Officer [Offline]
+15. Receive Token & Give Ballot Paper by Counter [Offline]
+16. Verify Ballot Paper by EC [Offline]
+---------
+17. Result Count by EC
+18. Result Upload by EC
+19. Result Screen - Offline Report View [Result Screen]

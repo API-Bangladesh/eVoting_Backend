@@ -1,0 +1,40 @@
+Online Voting Process:
+-----------------------------------
+1. Create Role (if needed) [Users]
+2. Bind Permission with role [Users]
+3. Create Users (if needed) [Users]
+---------
+4. Change Settings [Settings]
+---------
+5. Create Position [Ballots]
+6. Create Candidate [Ballots]
+7. Create Ballot [Ballots]
+---------
+8. Import Voters + Image [Voters]
+---------
+9. Disable Imported Voters from Action Setting [Settings]
+10. Disable Permanently Voters Deletion from Action Setting [Settings]
+---------
+11. Check Application Form Submission Frontend Server in Global Setting [Setting]
+12. Check Voting Frontend Server in Global Setting [Setting]
+---------
+13. Check Queue Service is Working [Server]
+14. Test Email Sending is Working [Test Devices & Services]
+15. Enable SMS Gateway Service from Action Setting [Setting]
+16. Test SMS Sending is Working [Test Devices & Services]
+16.1. Test Devices & Services at One Place [Test Devices & Services]
+---------
+17. Create Apllication Submission Form by Builder [Online]
+---------
+18. Create Email Templates for ONLINE_APPLICATION_FORM [Email Templates]
+19. Send ONLINE_APPLICATION_FORM to All Voters [Email Templates]
+20. Check All Submissions & Approve or Declined Voters [Online]
+---------
+21. Generate Tokens for Online Voters [Online]
+22. Lock Token Generation [Online]
+---------
+23. Send ONLINE_VOTING_STARTED to All Online Voters [Email Templates]
+24. Send ONLINE_VOTING_INVITATION to All Online Voters [Email Templates]
+25. Send GENERAL Email by Voter Type
+---------
+26. Result Screen - Online Voting Result

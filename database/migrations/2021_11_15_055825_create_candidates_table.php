@@ -1,0 +1,35 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateCandidatesTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('candidates', function (Blueprint $table) {
+            $table->id();
+            $table->string('name')->nullable()->unique();
+            $table->string('icon')->nullable();
+            $table->integer('counter')->nullable();
+            $table->integer('offline_vote_count')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('candidates');
+    }
+}
