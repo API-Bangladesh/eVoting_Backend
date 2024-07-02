@@ -13,7 +13,7 @@ use App\Models\User;
 use App\Models\Vote;
 use App\Models\Voter;
 use Illuminate\Support\Carbon;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Milon\Barcode\Facades\DNS1DFacade;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
@@ -228,12 +228,12 @@ function get_upload_directory_path()
     $monthFolder = $yearFolder . '/' . date("m");
     $dirFolder = $monthFolder;
 
-    if (!Storage::exists($yearFolder)) {
-        Storage::makeDirectory($yearFolder);
+    if (!File::exists($yearFolder)) {
+        File::makeDirectory($yearFolder, 0777, true);
     }
 
-    if (!Storage::exists($monthFolder)) {
-        Storage::makeDirectory($monthFolder);
+    if (!File::exists($monthFolder)) {
+        File::makeDirectory($monthFolder, 0777, true);
     }
 
     return $dirFolder;
