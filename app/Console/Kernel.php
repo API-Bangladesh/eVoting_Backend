@@ -2,7 +2,6 @@
 
 namespace App\Console;
 
-use App\Console\Commands\CmdSendEmailTemplate;
 use App\Http\Controllers\EmailTemplateController;
 use App\Models\EmailTemplate;
 use Illuminate\Console\Scheduling\Schedule;
@@ -25,6 +24,12 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
+        // Queue Work
+        $schedule->command('queue:work --stop-when-empty')
+            ->everyMinute()
+            ->withoutOverlapping();
+
+        // Email Schedule
         $schedule->call(function () use ($schedule) {
             $query = EmailTemplate::query();
             $query->where('schedule_date', Carbon::today());
